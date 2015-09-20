@@ -436,7 +436,7 @@ On Ambari, click on *Hosts*, then click on *phd1.paris.lab* and finally click on
 
 ## Start a job on the Tweetstream application
 
-You can now access the Tweetstream application on <http://localhost>.
+You can now access the Tweetstream application at <http://tweetstream.cf.isus.emc.com> or <http://localhost> if you've installed it on your laptop.
 
 ![Tweetstream](Tweetstream1.png)
 
