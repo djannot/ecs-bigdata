@@ -361,7 +361,7 @@ Under *Custom core-site*, add the following properties:
 - fs.viprfs.auth.anonymous_translation: CURRENT_USER
 - fs.viprfs.auth.identity_translation: NONE
 
-Click on the *YARN* service and then on the *Configs* tab.
+Click on the *MapReduce2* service and then on the *Configs* tab.
 
 Under *Advanced mapred-site*, add */usr/phd/3.0.1.0-1/hadoop/lib/viprfs-client-2.0.1.0-hadoop-2.3.jar* in the *mapreduce.application.classpath* field.
 
