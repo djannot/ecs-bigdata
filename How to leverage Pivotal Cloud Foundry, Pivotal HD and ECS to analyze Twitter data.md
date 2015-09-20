@@ -107,7 +107,7 @@ Make sure you have Golang installed and run the following command from the tweet
 go build
 ```
 
-Create another bucket using *s3curl* (You don't need to specify *-H 'x-emc-file-system-access-enabled: true'* as it won't be accessed through HDFS). This bucket won't be used to store data, but only to store information about the jobs you'll run.
+Create another bucket using *s3curl* (You don't need to specify *-H 'x-emc-file-system-access-enabled: true'* as it won't be accessed through HDFS). This bucket won't be used to store data, but only to store information about the jobs you'll run. I use this mechanism to synchronize the different instances when it's running on Cloud Foundry.
 
 Set the environment variables as shown below:
 
