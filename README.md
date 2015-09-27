@@ -448,9 +448,9 @@ The *Endpoint* is either *https://object.ecstestdrive.com* if you're in the EMC 
 
 The *Bucket* is the name of the first bucket you created using *s3curl*.
 
-The *Object Size (B)* is the object size you want to create on ECS. I recommend using *15728640* (15 MB).
+The *Object Size (B)* is the size of the objects you want to create on ECS. I recommend using *15728640* (15 MB).
 
-Finally, indicate one or several keywords. If you have no idea, just use *twitter*. It will generate a new 15 MB object every few minutes wiht this keyword. If you use something to specific, you could have to wait hours before getting enough data to create create a 15 MB object.
+Finally, indicate one or several keywords. If you have no idea, just use *twitter*. It will generate a new 15 MB object every few minutes with this keyword. If you use something too specific, you could have to wait hours before getting enough data to create a 15 MB object.
 
 You can click on *Get Status* to see when the latest object has been created.
 
@@ -618,6 +618,12 @@ Time taken: 2.287 seconds, Fetched: 5 row(s)
 ``` 
 
 As you can see, I've been able to easily find the top 5 hashtags per day which are associated with positive sentiment signals (using simple smileys).
+
+Apache Hive supports analysis of large datasets stored in HDFS.
+
+It provides an SQL-like language called HiveQL with schema on read and transparently converts queries to map/reduce jobs.
+
+In this example, the script is using simple smileys to determine the sentiment associated with the tweets.
 
 You can find more information about the Hive script [here](http://blog.xebia.com/2012/05/15/sentiment-analysis-using-apache-hive/).
 
@@ -1406,6 +1412,12 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 As you can see, I've been able to easily find the number of Twitter users having more than 1000 followers using SparkSQL.
 
 If you compare with the Hive example, it was a lot simpler and Spark was able to determine the JSON schema itself.
+
+Finally, I was able to store the table in the S3 bucket in the Parquet format.
+
+Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem, regardless of the choice of data processing framework, data model or programming language.
+
+Frameworks like HAWQ or Impala can read and write data using this format.
 
 If you encounter any issues when running the commands above, you probably have corrupted JSON. In this case, I encourage you to stop the Tweetstream job, delete the content of the *twitter* directory and finally to start a new Tweetstream job.
 
