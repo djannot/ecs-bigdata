@@ -1,5 +1,17 @@
 # How to leverage Pivotal Cloud Foundry, Pivotal HD, Apache Spark and EMC ECS to analyze Twitter data
 
+## Introduction
+
+![ECS Big Data](Slide1.png)
+
+The goal of this demo is to demonstrate the ability to store a large amount of JSON data on ECS using the Amazon S3 API and to analyze the data in place using Apache Hive and Spark.
+
+To get a large amount of JSON data, I've created an application that listen on the Twitter stream and stores the data on ECS using the S3 API. This application is currently running on Pivotal Cloud Foundry.
+
+Instead of deploying an ECS system for this demo, I'm leveraging ECS Test Drive.
+
+Finally, I'll deploy Pivotal HD 3.0 in a Docker container to analyze the data stored on ECS.
+
 ## Prerequisites
 
 The minimum requirement is a Linux Virtual Machine with 16 GB of RAM (24 GB recommended) and Docker installed.
